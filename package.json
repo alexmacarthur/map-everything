@@ -1,0 +1,47 @@
+{
+    "name": "map-everything",
+    "version": "0.0.1",
+    "description": "Do something when someone is probably going to click something.",
+    "main": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexmacarthur/map-everything.git"
+    },
+    "keywords": [
+        "hover",
+        "intention"
+    ],
+    "scripts": {
+        "test": "jest",
+        "prettify": "prettier \"src/**/*.{md,js}\" --write",
+        "precommit": "pretty-quick --staged",
+        "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js --watch",
+        "build": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
+        "serve": "concurrently --kill-others \"npm run dev\" \"node serve.js\""
+    },
+    "author": "Alex MacArthur",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alexmacarthur/map-everything/issues"
+    },
+    "homepage": "https://github.com/alexmacarthur/map-everything#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "babel-jest": "^24.8.0",
+        "babel-loader": "^8.0.6",
+        "banner-webpack-plugin": "^0.2.3",
+        "concurrently": "^4.1.0",
+        "express": "^4.17.1",
+        "husky": "^2.4.0",
+        "jest": "^24.8.0",
+        "jest-date-mock": "^1.0.7",
+        "prettier": "^1.18.0",
+        "pretty-quick": "^1.11.0",
+        "regenerator-runtime": "^0.13.2",
+        "webpack": "^4.33.0",
+        "webpack-cli": "^3.3.3"
+    },
+    "dependencies": {}
+}
